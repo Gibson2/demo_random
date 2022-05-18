@@ -5,12 +5,18 @@
   </p>
 
   <small>
-    Posted <%= time_tag post.created_at, "data-local": "time-ago" %> <!--Configuration of local-time -->
+    Posted <%= time_tag post.created_at, "data-local": "time-ago" %> <!-- Configuration of local-time -->
   </small>
+
+  <p>
+    <strong>
+      <%= pluralize post.comments.count, "comment" %>
+    </strong> <!-- Agregando la cantidad de comentarios por Post / pluralize es un helper -->
+  </p>
 
   <p>
     <strong>Content:</strong>
     <%= post.content %>
   </p>
-
+  
 </div>

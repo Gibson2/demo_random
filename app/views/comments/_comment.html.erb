@@ -1,0 +1,5 @@
+<div id="<%= dom_id comment %>">
+    <%# Configurando página parcial para mostar el contenido de los comentarios%>
+    <%= comment.content %> -
+    <%= time_tag comment.created_at, "data-local": "time-ago" %>
+</div>

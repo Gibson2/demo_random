@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  resources :comments
-  resources :posts
+  
+  resources :posts do
+    resources :comments #configurando las rutas anidades debido a la realación de 1-N
+  end
   resources :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
 
   # Defines the root path route ("/")
-  # root "articles#index"
+  root "posts#index"
 end

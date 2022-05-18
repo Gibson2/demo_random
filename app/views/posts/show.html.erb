@@ -1,6 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @post %>
+<%= render "posts/comments", post: @post %> <%# representación de la conexión de los modelos %>
 
 <div>
   <%= link_to "Edit this post", edit_post_path(@post) %> |

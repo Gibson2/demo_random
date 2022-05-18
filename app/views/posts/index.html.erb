@@ -2,7 +2,11 @@
 
 <h1>Posts</h1>
 
-<%= link_to "New post", new_post_path %>
+<%#= link_to "New post", new_post_path %>
+<%= link_to new_post_path do%>
+  <%= button_to "New Post" %>
+  <%# Haiendo un link_to tipo Button (No sé si sea la manera correcta)  %>
+<% end %>
 
 <div id="posts">
   <% @posts.each do |post| %>

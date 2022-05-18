@@ -1,0 +1,8 @@
+<h2>Comments</h2>
+
+<div id="comments">
+<%# Expands to render partial: "comments/comment", collection: post.comments // Configuración de la vista parcial de comentarios por cada post %>
+    <%= render post.comments %>
+</div>
+
+<%= render "comments/new", post: post %>
